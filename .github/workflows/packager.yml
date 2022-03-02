@@ -18,11 +18,26 @@ jobs:
           type: "zip"
           filename: "bnp-pack.zip"
           exclusions: "*.git* /*node_modules/* .editorconfig .github"
-      - name: Upload Release
-        uses: ncipollo/release-action@main
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          commit: main
-          #tag: ${{ steps.time.outputs.time }} This will output as date
-          tag: v.0.${{ github.run_number }}
-          artifacts: "bnp-pack.zip"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: V.0.${{ github.run_number }}
+          release_name: Pack_Release v.0.${{ github.run_number }}
+          draft: false
+          prerelease: false
+
+
+      - name: Upload Modpack Release Asset
+        id: upload-modpack-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} 
+          asset_path: ./bnp-pack.zip
+          asset_name: bnp-pack.zip
+          asset_content_type: application/zip
