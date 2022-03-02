@@ -1,0 +1,28 @@
+name: Create Archive
+on: [push]
+# This is a comment, and this is used to force a run
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Time
+        id: time
+        uses: nanzm/get-time-action@master
+        with:
+          timeZone: 8
+          format: "YYYYMMDDHHmmss"
+      - uses: actions/checkout@master
+      - name: Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+          type: "zip"
+          filename: "bnp-pack.zip"
+          exclusions: "*.git* /*node_modules/* .editorconfig .github"
+      - name: Upload Release
+        uses: ncipollo/release-action@main
+        with:
+          commit: main
+          #tag: ${{ steps.time.outputs.time }} This will output as date
+          tag: v.0.${{ github.run_number }}
+          artifacts: "bnp-pack.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
