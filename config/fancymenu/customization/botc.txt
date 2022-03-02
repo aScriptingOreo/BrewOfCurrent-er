@@ -1,0 +1,184 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screen.MainMenuScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  path = config/fancymenu/customguis/botc_background.png
+  action = texturizebackground
+}
+
+customization {
+  action = setscale
+  scale = 2
+}
+
+customization {
+  path = config/fancymenu/customguis/botc_self.png
+  orientation = mid-centered
+  x = -185
+  width = 371
+  action = addtexture
+  actionid = b306ece4-d77b-4096-b9c9-bcd1d4ae0fda1627600249331
+  y = -113
+  height = 100
+}
+
+customization {
+  identifier = %id=502346%
+  action = hidebutton
+}
+
+customization {
+  orientation = mid-centered
+  buttonaction = openlink
+  backgroundhovered = config/fancymenu/customguis/disc_on.png
+  label = 
+  hoverlabel =                              Join Our Discord
+  x = 78
+  width = 20
+  actionid = bd3e4e04-dd3e-4c5a-905e-ef7d3db8670c1627606306105
+  action = addbutton
+  y = 53
+  backgroundnormal = config/fancymenu/customguis/disc_off.png
+  value = https://discord.gg/NH5hfya
+  height = 20
+}
+
+customization {
+  identifier = %id=400322%
+  orientation = mid-centered
+  x = -100
+  action = movebutton
+  y = 25
+}
+
+customization {
+  identifier = %id=400322%
+  action = setbuttontexture
+  backgroundhovered = config/fancymenu/customguis/button_on.png
+  backgroundnormal = config/fancymenu/customguis/button_low.png
+}
+
+customization {
+  identifier = %id=400298%
+  orientation = mid-centered
+  x = -100
+  action = movebutton
+  y = 0
+}
+
+customization {
+  identifier = %id=400298%
+  action = setbuttontexture
+  backgroundhovered = config/fancymenu/customguis/button_on.png
+  backgroundnormal = config/fancymenu/customguis/button_low.png
+}
+
+customization {
+  identifier = %id=400346%
+  orientation = mid-centered
+  x = -100
+  action = movebutton
+  y = 53
+}
+
+customization {
+  identifier = %id=400346%
+  action = setbuttontexture
+  backgroundhovered = config/fancymenu/customguis/button_on.png
+  backgroundnormal = config/fancymenu/customguis/button_low.png
+}
+
+customization {
+  identifier = %id=604382%
+  orientation = mid-centered
+  x = 44
+  action = movebutton
+  y = 53
+}
+
+customization {
+  identifier = %id=604382%
+  action = setbuttonlabel
+  value = 
+}
+
+customization {
+  identifier = %id=604382%
+  action = setbuttontexture
+  backgroundhovered = config/fancymenu/customguis/acc_on.png
+  backgroundnormal = config/fancymenu/customguis/acc_off.png
+}
+
+customization {
+  identifier = %id=400382%
+  orientation = mid-centered
+  x = -100
+  action = movebutton
+  y = 86
+}
+
+customization {
+  identifier = %id=400382%
+  action = setbuttontexture
+  backgroundhovered = config/fancymenu/customguis/button_on.png
+  backgroundnormal = config/fancymenu/customguis/button_low.png
+}
+
+customization {
+  identifier = %id=502382%
+  orientation = mid-centered
+  x = 2
+  action = movebutton
+  y = 86
+}
+
+customization {
+  identifier = %id=502382%
+  action = setbuttontexture
+  backgroundhovered = config/fancymenu/customguis/button_on.png
+  backgroundnormal = config/fancymenu/customguis/button_low.png
+}
+
+customization {
+  identifier = %id=376382%
+  orientation = mid-centered
+  x = 11
+  action = movebutton
+  y = 53
+}
+
+customization {
+  identifier = %id=376382%
+  action = setbuttonlabel
+  value = 
+}
+
+customization {
+  identifier = %id=376382%
+  action = setbuttontexture
+  backgroundhovered = config/fancymenu/customguis/lang_on.png
+  backgroundnormal = config/fancymenu/customguis/lang_off.png
+}
+
+customization {
+  orientation = mid-centered
+  basecolor = #ffff00
+  shadow = true
+  splashfilepath = config\fancymenu\customguis\splashes.txt
+  rotation = 0.0
+  x = 102
+  actionid = db124c73-0dfb-41a5-a65c-f7dee7d4f6b41627605479100
+  action = addsplash
+  y = -20
+  scale = 1.0
+  refresh = true
+  bouncing = true
+}
+

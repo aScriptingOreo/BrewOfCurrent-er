@@ -1,0 +1,12 @@
+
+#Arcane Fundamentals // HUD Settings
+[af_hud_settings]
+	#Positions relative to top left corner of the screen
+	#Large values may cause strange scaling
+	#Horizontal position of mana display
+	#Range: 0 ~ 720
+	hud_x = 5
+	#Vertical position of mana display
+	#Range: 0 ~ 420
+	hud_y = 25
+
